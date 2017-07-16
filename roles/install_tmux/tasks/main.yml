@@ -1,0 +1,32 @@
+---
+- name: Download tmux source master
+  git:
+    repo: 'https://github.com/tmux/tmux.git'
+    dest: '/usr/src/tmux'
+
+- name: Run autogen.sh
+  command: '/bin/sh autogen.sh'
+  args:
+    chdir: '/usr/src/tmux'
+    creates: '/usr/src/tmux/configure'
+
+- name: Run configure
+  command: './configure'
+  args:
+    chdir: '/usr/src/tmux'
+    creates: 'Makefile'
+
+- name: Make tmux
+  make:
+    chdir: '/usr/src/tmux'
+
+- name: Install tmux via make install
+  make:
+    chdir: '/usr/src/tmux'
+    target: install
+
+- name: Add /usr/local/bin to global PATH via /etc/profile.d/tmux.sh
+  copy:
+    src: tmux.sh
+    dest: '/etc/profile.d/tmux.sh'
+    mode: 0644

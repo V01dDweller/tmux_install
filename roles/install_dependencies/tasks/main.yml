@@ -1,0 +1,10 @@
+---
+- name: Install dependencies
+  yum:
+    name: '{{ item }}'
+    state: installed
+  with_items:
+  - 'git'
+  - 'automake'
+  - 'gcc'
+  - 'ncurses-devel'
