@@ -1,6 +1,6 @@
 # Install tmux from source #
 
-This ansible playbook installs tmux from source on RHEL7/CentOS7 since those distributions only provide the ancient tmux 1.8. The playbook:
+This ansible playbook installs tmux from source on RHEL7/CentOS7 since those distributions only provide the ancient tmux 1.8.
 
 * assumptions:
     * sudo-to-root with NOPASSWD.
