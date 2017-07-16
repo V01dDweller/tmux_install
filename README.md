@@ -11,6 +11,10 @@ This ansible playbook installs tmux from source on RHEL7/CentOS7 since those dis
 * installs libevent-devel from rpmfine.pbone.net since this is not avaiable without supplemental repos
 * adds /usr/local/bin to the global PATH
 
+## Usage ##
+
+`ansible-playbook -i <your-inventory>.ini tmux_install.yml`
+
 Tested successfully against a EC2 RHEL7 instance.
 
 ```
