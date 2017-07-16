@@ -9,7 +9,10 @@ This ansible playbook installs tmux from source on RHEL7/CentOS7 since those dis
     * git
     * ncurses-devel
 * installs libevent-devel from rpmfind.pbone.net since this is not avaiable without supplemental repos
+* Install tmux to /usr/local/bin
 * adds /usr/local/bin to the global PATH
+* Uses /usr/src/tmux as the working directory
+* Does not clean up after itself (may add that later)
 
 ## Usage ##
 
