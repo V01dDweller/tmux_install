@@ -20,7 +20,7 @@ This ansible playbook installs tmux from source on RHEL7/CentOS7 since those dis
 
 `ansible-playbook -i <your-inventory>.ini tmux_install.yml`
 
-Tested successfully against a EC2 RHEL7 instance.
+**Playbook Contents**
 
 ```
 tmux_install
