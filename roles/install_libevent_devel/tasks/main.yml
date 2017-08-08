@@ -1,4 +1,4 @@
 ---
 - name: Install libevent-devel from rpmfind.pbone.net
   yum:
-    name: 'ftp://bo.mirror.garr.it/2/scientific/7.3/x86_64/os/Packages/libevent-devel-2.0.21-4.el7.x86_64.rpm'
+    name: 'http://bo.mirror.garr.it/2/scientific/7.3/x86_64/os/Packages/libevent-devel-2.0.21-4.el7.x86_64.rpm'
