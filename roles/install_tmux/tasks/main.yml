@@ -1,3 +1,4 @@
+# file: roles/install_tmux/tasks/main.yml
 ---
 - name: Download tmux source master
   git:
@@ -25,7 +26,7 @@
     chdir: '/usr/src/tmux'
     target: install
 
-- name: Add /usr/local/bin to global PATH via /etc/profile.d/tmux.sh
+- name: Add /usr/local/bin to PATH via /etc/profile.d/tmux.sh
   copy:
     src: tmux.sh
     dest: '/etc/profile.d/tmux.sh'
