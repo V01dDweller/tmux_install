@@ -1,5 +1,7 @@
+# file: tmux_install.yml
 ---
-- hosts: all
+- name: Install Tmux
+  hosts: all
 
   become: True
 
