@@ -2,9 +2,7 @@
 ---
 - name: Install Tmux
   hosts: all
-
   become: True
-
   roles:
   - install_dependencies
   - install_libevent_devel
