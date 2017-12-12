@@ -9,3 +9,15 @@
   - 'automake'
   - 'gcc'
   - 'ncurses-devel'
+  when: ansible_pkg_mgr == 'yum'
+
+- name: Install dependencies
+  apt:
+    name: '{{item}}'
+    state: latest
+  with_items:
+  - 'git'
+  - 'automake'
+  - 'gcc'
+  - 'libncurses5-dev'
+  when: ansible_pkg_mgr == 'apt'
