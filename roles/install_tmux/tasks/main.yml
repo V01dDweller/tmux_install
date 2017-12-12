@@ -31,3 +31,4 @@
     src: tmux.sh
     dest: '/etc/profile.d/tmux.sh'
     mode: 0644
+  when: ansible_os_family == 'RedHat'
