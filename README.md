@@ -1,20 +1,20 @@
 # Install tmux from source #
 
-This ansible playbook installs tmux from source on RHEL7/CentOS7 since those distributions only provide the ancient tmux 1.8.
+This ansible playbook installs tmux from the source-master on Debian/Ubuntu or RHEL7/CentOS7.
 
 * assumptions:
     * sudo-to-root with NOPASSWD.
     * internet connection with no proxy
-* installs the following pre-requisite packages from primary yum repos:
+* installs the following pre-requisite packages from primary yum/apt repos:
     * automake
     * gcc
     * git
-    * ncurses-devel
-* installs libevent-devel from rpmfind.pbone.net since this is not avaiable without supplemental repos
+    * ncurses-devel/libncurses5-dev
+* installs libevent-devel from rpmfind.pbone.net for RHEL/CentOS since this is not avaiable without supplemental repos
 * Installs tmux to /usr/local/bin
-* adds /usr/local/bin to the global PATH
+* adds /usr/local/bin to the global PATH for RHEL/CentOS
 * Uses /usr/src/tmux as the working directory
-* Does not clean up after itself (may add that later)
+* Does not clean up /usr/src after itself (may add that later)
 
 ## Usage ##
 
