@@ -2,22 +2,20 @@
 ---
 - name: Install dependencies
   yum:
-    name: '{{ item }}'
+    name:
+      - 'git'
+      - 'automake'
+      - 'gcc'
+      - 'ncurses-devel'
     state: installed
-  with_items:
-  - 'git'
-  - 'automake'
-  - 'gcc'
-  - 'ncurses-devel'
   when: ansible_pkg_mgr == 'yum'
 
 - name: Install dependencies
   apt:
-    name: '{{item}}'
+    name:
+       - 'git'
+       - 'automake'
+       - 'gcc'
+       - 'libncurses5-dev'
     state: latest
-  with_items:
-  - 'git'
-  - 'automake'
-  - 'gcc'
-  - 'libncurses5-dev'
   when: ansible_pkg_mgr == 'apt'
