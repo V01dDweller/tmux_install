@@ -1,0 +1,5 @@
+# file: roles/install_tmux/meta/main.yml
+---
+dependencies:
+  - role: install_dependencies
+  - role: install_libevent_devel
