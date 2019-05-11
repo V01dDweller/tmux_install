@@ -1,6 +1,6 @@
 # file: roles/install_tmux/tasks/main.yml
 ---
-- name: Download tmux source master
+- name: Check out tmux source master
   git:
     repo: 'https://github.com/tmux/tmux.git'
     dest: '/usr/src/tmux'
