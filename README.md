@@ -24,7 +24,8 @@ This ansible playbook installs tmux from the source-master on Debian/Ubuntu or R
 
 ```
 tmux_install
-│
+├── README.md       # You are here
+├── ansible.cfg
 ├── roles
 │   ├── install_dependencies
 │   │   └── tasks
@@ -35,9 +36,9 @@ tmux_install
 │   └── install_tmux
 │       ├── files
 │       │   └── tmux.sh
+│       ├── meta
+│       │   └── main.yml
 │       └── tasks
 │           └── main.yml
 └── tmux_install.yml
 ```
-
-10 directories, 6 files
