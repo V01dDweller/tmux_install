@@ -7,6 +7,7 @@
       - 'automake'
       - 'gcc'
       - 'ncurses-devel'
+      - 'byacc'
     state: installed
   when: ansible_pkg_mgr == 'yum'
 
