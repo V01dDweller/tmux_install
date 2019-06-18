@@ -4,6 +4,7 @@
   git:
     repo: 'https://github.com/tmux/tmux.git'
     dest: '/usr/src/tmux'
+    version: '2.9'
 
 - name: Run autogen.sh
   command: '/bin/sh autogen.sh'
