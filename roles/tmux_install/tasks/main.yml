@@ -33,3 +33,8 @@
     dest: '/etc/profile.d/tmux.sh'
     mode: 0644
   when: ansible_os_family == 'RedHat'
+
+- name: Clean up
+  file:
+    path: '/usr/src/tmux'
+    state: absent
