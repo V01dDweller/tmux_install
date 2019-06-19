@@ -1,6 +1,6 @@
-# file: roles/install_dependencies/tasks/main.yml
+# file: roles/dependencies/tasks/main.yml
 ---
-- name: Install dependencies
+- name: yum innstall dependencies for RHEL distros
   yum:
     name:
       - 'git'
@@ -11,7 +11,7 @@
     state: installed
   when: ansible_pkg_mgr == 'yum'
 
-- name: Install dependencies
+- name: apt-install dependencies for Debian distros
   apt:
     name:
        - 'git'
