@@ -1,4 +1,4 @@
-# file: roles/install_tmux/meta/main.yml
+# file: roles/tmux_install/meta/main.yml
 ---
 dependencies:
   - role: install_dependencies
