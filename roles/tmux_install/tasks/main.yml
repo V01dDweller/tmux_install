@@ -1,6 +1,6 @@
-# file: roles/install_tmux/tasks/main.yml
+# file: roles/tmux_install/tasks/main.yml
 ---
-- name: Check out tmux source master
+- name: Git check out tmux 2.9 source master
   git:
     repo: 'https://github.com/tmux/tmux.git'
     dest: '/usr/src/tmux'
@@ -12,7 +12,7 @@
     chdir: '/usr/src/tmux'
     creates: '/usr/src/tmux/configure'
 
-- name: Run configure
+- name: Run ./configure
   command: './configure'
   args:
     chdir: '/usr/src/tmux'
