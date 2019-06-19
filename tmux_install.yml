@@ -1,7 +1,8 @@
 # file: tmux_install.yml
 ---
-- name: Install Tmux
+- name: Install Tmux 2.9 from source
   hosts: all
   become: yes
+  gather_facts: yes
   roles:
   - install_tmux
