@@ -5,4 +5,4 @@
   become: yes
   gather_facts: yes
   roles:
-  - install_tmux
+  - tmux_install
