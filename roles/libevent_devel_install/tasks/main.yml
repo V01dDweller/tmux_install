@@ -1,6 +1,6 @@
 # file: roles/libevent_devel_install/tasks/main.yml
 ---
-- name: Install libevent-devel from rpmfind.pbone.net
+- name: Install libevent-devel
   yum:
     name: 'libevent-devel'
     state: present
