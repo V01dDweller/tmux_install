@@ -9,5 +9,5 @@
 - name: Install libevent-dev
   apt:
     name: 'libevent-dev'
-    state: latest
+    state: installed
   when: ansible_pkg_mgr == 'apt'
