@@ -1,8 +1,8 @@
 # Install Tmux 2.9 from source #
 
-This ansible playbook installs tmux from the source-master on
-Debian/Ubuntu or RHEL7/CentOS7. Primarily intended for RHEL 7/CentOS 7
-or Ubuntu 16.04 LTS which default to old Tmux versions.
+This playbook installs tmux from the source-master on Debian/Ubuntu or
+RHEL7/CentOS7. Primarily intended for RHEL 7/CentOS 7 or Ubuntu 16.04
+LTS which default to old Tmux versions.
 
 * Assumptions:
     * sudo-to-root with NOPASSWD.
