@@ -18,5 +18,5 @@
        - 'automake'
        - 'gcc'
        - 'libncurses5-dev'
-    state: latest
+    state: installed
   when: ansible_pkg_mgr == 'apt'
