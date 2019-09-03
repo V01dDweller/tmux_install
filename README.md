@@ -25,6 +25,7 @@ Example Playbook
 
     ```yaml
     - hosts: servers
+      become: yes
       roles:
          - { role: V01dDweller.tmux_install }
     ```
