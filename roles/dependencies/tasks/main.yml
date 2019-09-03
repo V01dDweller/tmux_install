@@ -1,6 +1,6 @@
 # file: roles/dependencies/tasks/main.yml
 ---
-- name: yum innstall dependencies for RHEL distros
+- name: yum install dependencies for RHEL distros
   yum:
     name:
       - 'git'
