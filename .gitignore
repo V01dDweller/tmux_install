@@ -1,3 +1,9 @@
-hosts
-*swo
+# VI/Vim swap files
 *swp
+*swo
+
+# Windows desktop.ini
+desktop.ini
+
+# MacOS .DS_Store
+.DS_Store
