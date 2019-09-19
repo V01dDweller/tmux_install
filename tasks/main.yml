@@ -1,4 +1,4 @@
-# file: roles/tmux_install/tasks/main.yml
+# file: tmux_install/tasks/main.yml
 ---
 - name: Install dependencies for Debian distros
   apt:
