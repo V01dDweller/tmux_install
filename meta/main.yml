@@ -1,4 +1,4 @@
-# file: roles/tmux_install/meta/main.yml
+# file: tmux_install/meta/main.yml
 ---
 galaxy_info:
   author: V01dDweller
