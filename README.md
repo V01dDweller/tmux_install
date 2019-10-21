@@ -3,7 +3,7 @@ tmux\_install
 
 This role installs tmux from the source-master on Debian/Ubuntu or
 RHEL7/CentOS7. Primarily intended for RHEL 7/CentOS 7 or Ubuntu 16.04+
-which default to old Tmux versions.
+which default to old Tmux versions. This also works well on Ubuntu 19.04.
 
 **Notes:**
 * This role will attempt to install libevent-devel from rpmfind.pbone.net for RHEL/CentOS since it is not otherwise avaiable without supplemental repos
