@@ -8,6 +8,7 @@
        - 'git'
        - 'libevent-dev'
        - 'libncurses5-dev'
+       - 'pkg-config'
     state: installed
   when: ansible_pkg_mgr == 'apt'
 
