@@ -53,7 +53,7 @@ Create tmux_install.yml:
 ansible-playbook tmux_install.yml -K
 ```
 
-**4. Validate
+**4. Validate**
 
 ```
 bash-4.2$ tmux -V
