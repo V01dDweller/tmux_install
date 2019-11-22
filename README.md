@@ -20,15 +20,34 @@ Dependencies
 
 None.
 
-Example Playbook
+Example Usage
 ----------------
 
+**Install the role**
+```
+ansible-galaxy install V01dDweller.tmux_install
+```
+
+This installs the role in ~/.ansible/roles
+
+**Create a short playbook**
+
+create tmux_install.yml:
+
 ```yaml
-- hosts: servers
+- hosts: localhost
+  connection: local
   become: yes
+  gather_facts: yes
   roles:
      - role: V01dDweller.tmux_install
        tags: tmux
+```
+
+**Run the Playbook**
+
+```cmd
+ansible-playbook tmux_install.yml -K
 ```
 
 License
