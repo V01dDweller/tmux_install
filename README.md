@@ -32,16 +32,19 @@ This installs the role in ~/.ansible/roles
 
 **2. Create a short playbook**
 
-create tmux_install.yml:
+Create tmux_install.yml:
 
 ```yaml
-- hosts: localhost
+# file: tmux_install.yml
+---
+- name: Install tmux
+  hosts: localhost
   connection: local
   become: yes
   gather_facts: yes
   roles:
      - role: V01dDweller.tmux_install
-       tags: tmux
+...
 ```
 
 **3. Run the Playbook**
