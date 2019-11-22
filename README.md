@@ -23,14 +23,14 @@ None.
 Example Usage
 ----------------
 
-**Install the role**
+**1. Install the role**
 ```
 ansible-galaxy install V01dDweller.tmux_install
 ```
 
 This installs the role in ~/.ansible/roles
 
-**Create a short playbook**
+**2. Create a short playbook**
 
 create tmux_install.yml:
 
@@ -44,7 +44,7 @@ create tmux_install.yml:
        tags: tmux
 ```
 
-**Run the Playbook**
+**3. Run the Playbook**
 
 ```cmd
 ansible-playbook tmux_install.yml -K
