@@ -50,7 +50,7 @@ Create tmux_install.yml:
 **3. Run the Playbook**
 
 ```cmd
-ansible-playbook tmux_install.yml -K
+ansible-playbook tmux_install.yml
 ```
 
 **4. Validate**
