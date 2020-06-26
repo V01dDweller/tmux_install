@@ -3,14 +3,14 @@
 - name: apt installing Ubuntu/Debian dependencies
   apt:
     name:
-       - 'automake'
-       - 'bison'
-       - 'gcc'
-       - 'git'
-       - 'libevent-dev'
-       - 'libncurses5-dev'
-       - 'make'
-       - 'pkg-config'
+      - 'automake'
+      - 'bison'
+      - 'gcc'
+      - 'git'
+      - 'libevent-dev'
+      - 'libncurses5-dev'
+      - 'make'
+      - 'pkg-config'
     state: present
   when: ansible_pkg_mgr == 'apt'
 
