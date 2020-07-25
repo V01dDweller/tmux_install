@@ -13,6 +13,7 @@ which default to old Tmux versions. This also works well on Ubuntu 19.04.
 
 Requirements
 ------------
+
 * Internet connection
 
 Dependencies
