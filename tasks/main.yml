@@ -1,5 +1,8 @@
 # file: tmux_install/tasks/main.yml
 ---
+- name: Gathering facts
+  setup:
+
 - name: apt installing Ubuntu/Debian dependencies
   apt:
     name:
