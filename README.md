@@ -45,6 +45,7 @@ Create tmux\_install.yml:
   become: true
   roles:
      - role: V01dDweller.tmux_install
+       tags: tmux
 ...
 ```
 
