@@ -6,7 +6,8 @@ RHEL7/CentOS7. Primarily intended for RHEL 7/CentOS 7 or Ubuntu 16.04+
 which default to old Tmux versions. This also works well on Ubuntu 19.04.
 
 **Notes:**
-* This role will attempt to install libevent-devel from rpmfind.pbone.net for RHEL/CentOS since it is not otherwise avaiable without supplemental repos
+* This role will attempt to install libevent-devel from rpmfind.pbone.net for
+  RHEL/CentOS since it is not otherwise avaiable without supplemental repos
 * Installs tmux to /usr/local/bin
 * Adds /usr/local/bin to the global PATH for RHEL/CentOS
 * Uses /usr/src/tmux as the working directory
@@ -33,7 +34,7 @@ This installs the role in ~/.ansible/roles
 
 **2. Create a short playbook**
 
-Create tmux_install.yml:
+Create tmux\_install.yml:
 
 ```yaml
 # file: tmux_install.yml
@@ -41,8 +42,7 @@ Create tmux_install.yml:
 - name: Install tmux
   hosts: localhost
   connection: local
-  become: yes
-  gather_facts: yes
+  become: true
   roles:
      - role: V01dDweller.tmux_install
 ...
