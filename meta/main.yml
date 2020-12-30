@@ -2,7 +2,7 @@
 ---
 galaxy_info:
   author: V01dDweller
-  description: Install Tmux 2.8 from source
+  description: Install Tmux 3.1 from source
   company: The Galaxy Project
   license: AFL v3.0
   min_ansible_version: 2.7

@@ -31,11 +31,11 @@
     state: installed
   when: ansible_pkg_mgr == 'yum' or ansible_pkg_mgr == 'dnf'
 
-- name: Git cloning tmux 2.8 source
+- name: Git cloning tmux 3.1 source
   git:
     repo: 'https://github.com/tmux/tmux.git'
     dest: '/usr/src/tmux'
-    version: '2.8'
+    version: '3.1'
 
 - name: Running autogen.sh
   command: '/bin/sh autogen.sh'

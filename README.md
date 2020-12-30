@@ -52,7 +52,7 @@ ansible-playbook tmux_install.yml
 
 ```
 bash-4.2$ tmux -V
-tmux 2.8
+tmux 3.1-rc
 ```
 
 License
