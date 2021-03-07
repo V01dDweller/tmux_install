@@ -16,7 +16,7 @@ Dependencies
 None.
 
 Example Usage
-----------------
+-------------
 
 **1. Install the role**
 ```
