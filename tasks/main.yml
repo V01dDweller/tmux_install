@@ -6,67 +6,67 @@
 - name: apt installing Ubuntu/Debian dependencies
   apt:
     name:
-      - 'automake'
-      - 'bison'
-      - 'gcc'
-      - 'git'
-      - 'libevent-dev'
-      - 'libncurses5-dev'
-      - 'make'
-      - 'pkg-config'
+      - automake
+      - bison
+      - gcc
+      - git
+      - libevent-dev
+      - libncurses5-dev
+      - make
+      - pkg-config
     state: present
-  when: ansible_pkg_mgr == 'apt'
+  when: ansible_pkg_mgr == apt
 
 - name: yum installing Fedora/EL dependencies
   yum:
     name:
-      - 'automake'
-      - 'byacc'
-      - 'gcc'
-      - 'git'
-      - 'libevent-devel'
-      - 'ncurses-devel'
-      - 'xclip'
-      - 'xsel'
+      - automake
+      - byacc
+      - gcc
+      - git
+      - libevent-devel
+      - ncurses-devel
+      - xclip
+      - xsel
     state: installed
-  when: ansible_pkg_mgr == 'yum' or ansible_pkg_mgr == 'dnf'
+  when: ansible_pkg_mgr == yum or ansible_pkg_mgr == dnf
 
 - name: Git cloning tmux 3.1 source
   git:
-    repo: 'https://github.com/tmux/tmux.git'
-    dest: '/usr/src/tmux'
-    version: '3.1'
+    repo: https://github.com/tmux/tmux.git
+    dest: /usr/src/tmux
+    version: 3.1
 
 - name: Running autogen.sh
-  command: '/bin/sh autogen.sh'
+  command: /bin/sh autogen.sh
   args:
-    chdir: '/usr/src/tmux'
-    creates: '/usr/src/tmux/configure'
+    chdir: /usr/src/tmux
+    creates: /usr/src/tmux/configure
 
 - name: Running ./configure
-  command: './configure'
+  command: ./configure
   args:
-    chdir: '/usr/src/tmux'
-    creates: 'Makefile'
+    chdir: /usr/src/tmux
+    creates: Makefile
 
 - name: Running make
   make:
-    chdir: '/usr/src/tmux'
+    chdir: /usr/src/tmux
 
 - name: Installing via make install
   make:
-    chdir: '/usr/src/tmux'
+    chdir: /usr/src/tmux
     target: install
 
 - name: Adding /usr/local/bin to PATH via /etc/profile.d/tmux.sh
   copy:
     src: tmux.sh
-    dest: '/etc/profile.d/tmux.sh'
+    dest: /etc/profile.d/tmux.sh
     mode: 0644
-  when: ansible_os_family == 'RedHat'
+  when: ansible_os_family == RedHat
 
 - name: Cleaning up
   file:
-    path: '/usr/src/tmux'
+    path: /usr/src/tmux
     state: absent
 ...
