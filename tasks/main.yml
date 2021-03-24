@@ -15,7 +15,7 @@
       - make
       - pkg-config
     state: present
-  when: ansible_pkg_mgr == apt
+  when: ansible_pkg_mgr == 'apt'
 
 - name: yum installing Fedora/EL dependencies
   yum:
@@ -63,7 +63,7 @@
     src: tmux.sh
     dest: /etc/profile.d/tmux.sh
     mode: 0644
-  when: ansible_os_family == RedHat
+  when: ansible_os_family == 'RedHat'
 
 - name: Cleaning up
   file:
