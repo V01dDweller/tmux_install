@@ -1,23 +1,20 @@
-tmux\_install
-=============
+# tmux_install
+
 **Last update:** 7/31/2022
 
 This role installs tmux from the source-master on Debian/Ubuntu or
 RHEL7/CentOS7. Primarily intended for RHEL 7/CentOS 7 or Ubuntu 16.04+
 which default to old Tmux versions. This also works well on Ubuntu 19.04.
 
-Requirements
-------------
+## Requirements
 
 * Internet connection
 
-Dependencies
-------------
+## Dependencies
 
 None.
 
-Example Usage
--------------
+## Example Usage
 
 **1. Install the role**
 ```
@@ -56,12 +53,10 @@ bash-4.2$ tmux -V
 tmux 3.1-rc
 ```
 
-License
--------
+## License
 
 BSD
 
-Author Information
-------------------
+## Author Information
 
 Written by V01dDweller in 2019.
