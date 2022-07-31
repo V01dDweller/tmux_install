@@ -25,7 +25,7 @@ This installs the role in ~/.ansible/roles
 
 **2. Create a short playbook**
 
-Create tmux\_install.yml:
+Create tmux_install.yml:
 
 ```yaml
 # file: tmux_install.yml
