@@ -17,6 +17,7 @@ None.
 ## Example Usage
 
 **1. Install the role**
+
 ```
 ansible-galaxy install V01dDweller.tmux_install
 ```
