@@ -59,4 +59,4 @@ BSD
 
 ## Author Information
 
-Written by V01dDweller in 2019.
+By V01dDweller
