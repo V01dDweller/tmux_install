@@ -1,7 +1,7 @@
 # file: tasks/main.yml
 ---
 - name: Gathering facts
-  asetup:
+  setup:
     gather_subset: min
 
 - name: apt installing Ubuntu/Debian dependencies
