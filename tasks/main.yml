@@ -1,4 +1,4 @@
-# file: tmux_install/tasks/main.yml
+# file: tasks/main.yml
 ---
 - name: Gathering facts
   asetup:
