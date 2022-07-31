@@ -36,7 +36,7 @@
   git:
     repo: https://github.com/tmux/tmux.git
     dest: /usr/src/tmux
-    version: latest
+    version: 3.3a
 
 - name: Running autogen.sh
   command: /bin/sh autogen.sh
