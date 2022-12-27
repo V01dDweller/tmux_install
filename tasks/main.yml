@@ -1,11 +1,11 @@
 # file: tasks/main.yml
 ---
 - name: Gathering facts
-  setup:
+  ansible.builtin.setup:
     gather_subset: min
 
-- name: apt installing Ubuntu/Debian dependencies
-  apt:
+- name: installing Ubuntu/Debian dependencies
+  ansible.builtin.apt:
     name:
       - automake
       - bison
@@ -18,8 +18,8 @@
     state: present
   when: ansible_pkg_mgr == 'apt'
 
-- name: yum installing Fedora/EL dependencies
-  yum:
+- name: Installing Fedora/EL dependencies
+  ansible.builtin.yum:
     name:
       - automake
       - byacc
@@ -33,34 +33,34 @@
   when: ansible_pkg_mgr == 'yum' or ansible_pkg_mgr == 'dnf'
 
 - name: Git cloning tmux source
-  git:
+  ansible.builtin.git:
     repo: https://github.com/tmux/tmux.git
     dest: /usr/src/tmux
     version: 3.3a
 
 - name: Running autogen.sh
-  command: /bin/sh autogen.sh
+  ansible.builtin.command: /bin/sh autogen.sh
   args:
     chdir: /usr/src/tmux
     creates: /usr/src/tmux/configure
 
 - name: Running ./configure
-  command: ./configure
+  ansible.builtin.command: ./configure
   args:
     chdir: /usr/src/tmux
     creates: Makefile
 
 - name: Running make
-  make:
+  community.general.make:
     chdir: /usr/src/tmux
 
 - name: Installing via make install
-  make:
+  community.general.make:
     chdir: /usr/src/tmux
     target: install
 
 - name: Adding /usr/local/bin to PATH via /etc/profile.d/tmux.sh
-  copy:
+  ansible.builtin.copy:
     src: tmux.sh
     dest: /etc/profile.d/tmux.sh
     mode: 0644
