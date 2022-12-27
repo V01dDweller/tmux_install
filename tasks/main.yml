@@ -4,7 +4,7 @@
   ansible.builtin.setup:
     gather_subset: min
 
-- name: installing Ubuntu/Debian dependencies
+- name: Installing Ubuntu/Debian dependencies
   ansible.builtin.apt:
     name:
       - automake
