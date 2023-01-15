@@ -53,6 +53,8 @@
 - name: Running make
   community.general.make:
     chdir: /usr/src/tmux
+    params:
+      NUMTHREADS: 4
 
 - name: Installing via make install
   community.general.make:
