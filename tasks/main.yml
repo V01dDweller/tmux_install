@@ -1,7 +1,7 @@
 # file: tasks/main.yml
 ---
 - name: Checking installed version of tmux
-  ansible.builtin.command: tmux -V
+  ansible.builtin.command: /usr/local/bin/tmux -V
   register: tmux_version_installed
   changed_when: false
   failed_when: false
