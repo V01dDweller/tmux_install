@@ -1,0 +1,25 @@
+# file: molecule/default/molecule.yml
+---
+dependency:
+  name: galaxy
+
+driver:
+  name: docker
+
+platforms:
+  - name: centos7
+    image: 'centos:7.9.2009'
+
+  - name: ubuntu20
+    image: 'ubuntu:focal'
+
+  - name: ubuntu22
+    image: 'ubuntu:jammy'
+
+provisioner:
+  name: ansible
+  config_options:
+    defaults:
+      stdout_callback: community.general.yaml
+      stderr_callback: community.general.yaml
+...

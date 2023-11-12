@@ -1,0 +1,12 @@
+# file: molecule/ubuntu/molecule.yml
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+platforms:
+  - name: ubuntu20
+    image: 'ubuntu:focal'
+  - name: ubuntu22
+    image: 'ubuntu:jammy'
+...

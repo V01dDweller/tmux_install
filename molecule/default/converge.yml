@@ -1,0 +1,10 @@
+# file: molecule/default/converge.yml
+---
+- name: Converge
+  hosts: all
+  gather_facts: false
+  roles:
+    - role: tmux_install
+      tags: tmux
+...
+# vim: ft=ansible syntax=yaml.ansible:

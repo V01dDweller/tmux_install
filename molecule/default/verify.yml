@@ -1,0 +1,15 @@
+# file: molecule/default/verify.yml
+---
+- name: Verify
+  hosts: all
+  tasks:
+    - name: Check if Tmux is Installed
+      ansible.builtin.stat:
+        path: /usr/local/bin/tmux
+      register: tmux_check
+
+    - name: Assert that tmux is installed
+      ansible.builtin.assert:
+        that: tmux_check.stat.exists
+...
+# vim: ft=ansible syntax=yaml.ansible:
