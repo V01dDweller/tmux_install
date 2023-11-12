@@ -44,6 +44,7 @@
           - gcc
           - git
           - libevent-devel
+          - make
           - ncurses-devel
           - xclip
           - xsel
