@@ -36,6 +36,12 @@
         update_cache: true
       when: ansible_pkg_mgr == 'apt'
 
+    - name: Installing epel-releases for Fedora/EL
+      ansible.builtin.yum:
+        name: epel-release
+        state: installed
+      when: ansible_pkg_mgr == 'yum' or ansible_pkg_mgr == 'dnf'
+
     - name: Installing Fedora/EL dependencies
       ansible.builtin.yum:
         name:
