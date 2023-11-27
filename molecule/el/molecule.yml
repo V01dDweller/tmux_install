@@ -1,0 +1,54 @@
+# file: molecule/el/molecule.yml
+---
+scenario:
+  name: el
+  create_sequence:
+    # - dependency
+    - create
+    # - prepare
+  converge_sequence:
+    # - dependency
+    - create
+    # - prepare
+    - converge
+  test_sequence:
+    - destroy
+    # - dependency
+    - syntax
+    - create
+    # - prepare
+    - converge
+    - idempotence
+    # - side_effect
+    - verify
+    - destroy
+  destroy_sequence:
+    # - dependency
+    # - cleanup
+    - destroy
+
+dependency:
+  name: galaxy
+
+driver:
+  name: docker
+
+platforms:
+  - name: centos7
+    image: 'centos:7.9.2009'
+    pre_build_image: false
+
+  - name: almalinux8
+    image: 'almalinux:8'
+    pre_build_image: false
+
+provisioner:
+  name: ansible
+  config_options:
+    defaults:
+      stdout_callback: community.general.yaml
+      stderr_callback: community.general.yaml
+  inventory:
+    host_vars:
+      ansible_user: ansible
+...
