@@ -36,6 +36,7 @@ driver:
 platforms:
   - name: centos7
     image: 'centos:7.9.2009'
+    pre_build_image: false
 
   - name: almalinux8
     image: 'almalinux:8'
@@ -43,9 +44,11 @@ platforms:
 
   - name: ubuntu20
     image: 'ubuntu:focal'
+    pre_build_image: false
 
   - name: ubuntu22
     image: 'ubuntu:jammy'
+    pre_build_image: false
 
 provisioner:
   name: ansible
