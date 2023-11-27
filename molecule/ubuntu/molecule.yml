@@ -1,5 +1,7 @@
 # file: molecule/ubuntu/molecule.yml
 ---
+scenario:
+  name: ubuntu
 dependency:
   name: galaxy
 driver:
