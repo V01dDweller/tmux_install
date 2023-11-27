@@ -5,6 +5,7 @@
   gather_facts: false
   roles:
     - role: tmux_install
+      become: true
       tags: tmux
 ...
 # vim: ft=ansible syntax=yaml.ansible:
