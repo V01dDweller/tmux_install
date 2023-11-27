@@ -37,6 +37,10 @@ platforms:
   - name: centos7
     image: 'centos:7.9.2009'
 
+  - name: almalinux8
+    image: 'almalinux:8'
+    pre_build_image: false
+
   - name: ubuntu20
     image: 'ubuntu:focal'
 
