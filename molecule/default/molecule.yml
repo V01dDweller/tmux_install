@@ -56,4 +56,7 @@ provisioner:
     defaults:
       stdout_callback: community.general.yaml
       stderr_callback: community.general.yaml
+  inventory:
+    host_vars:
+      ansible_user: ansible
 ...
