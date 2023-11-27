@@ -1,5 +1,7 @@
 # file: molecule/default/molecule.yml
 ---
+scenario:
+  name: default
 dependency:
   name: galaxy
 
