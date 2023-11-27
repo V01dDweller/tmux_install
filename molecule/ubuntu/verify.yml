@@ -1,14 +1,1 @@
-# file: molecule/ubuntu/verify.yml
----
-- name: Verify
-  hosts: all
-  tasks:
-    - name: Check if Vim is Installed
-      ansible.builtin.stat:
-        path: /usr/local/bin/vim
-      register: vim_check
-
-    - name: Assert that Vim is installed
-      ansible.builtin.assert:
-        that: vim_check.stat.exists
-...
+../default/verify.yml

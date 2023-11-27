@@ -1,10 +1,1 @@
-# file: molecule/ubuntu/converge.yml
----
-- name: Converge
-  hosts: all
-  gather_facts: false
-  roles:
-    - role: vim_install
-      tags: vim
-...
-# vim: ft=ansible syntax=yaml.ansible:
+../default/converge.yml
