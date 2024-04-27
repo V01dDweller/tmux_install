@@ -1,4 +1,4 @@
 # file: defaults/main.yml
 ---
-tmux_version: 3.3a
+tmux_version: 3.4
 ...
