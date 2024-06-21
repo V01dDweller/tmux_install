@@ -15,7 +15,7 @@
     msg: "Installed version is {{ tmux_version_installed.stdout }}"
 
 - name: Installing Tmux from source
-  when: not tmux_version_installed.stdout is search(tmux_version)
+  when: not tmux_version_installed.stdout != tmux_version
   block:
     - name: Gathering facts
       ansible.builtin.setup:
