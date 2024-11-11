@@ -1,5 +1,7 @@
 # tmux_install
 
+![Ansible Role](https://img.shields.io/ansible/role/d/v01ddweller/tmux_install)
+
 **Last update:** 7/31/2022
 
 This role installs tmux from the source-master on Debian/Ubuntu or
