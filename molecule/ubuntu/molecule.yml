@@ -42,6 +42,10 @@ platforms:
     image: 'ubuntu:jammy'
     pre_build_image: false
 
+  - name: ubuntu24
+    image: 'ubuntu:jammy'
+    pre_build_image: false
+
 provisioner:
   name: ansible
   config_options:
