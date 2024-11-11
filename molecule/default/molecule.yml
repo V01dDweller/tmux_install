@@ -38,11 +38,19 @@ platforms:
     image: 'almalinux:8'
     pre_build_image: false
 
+  - name: almalinux9
+    image: 'almalinux:9'
+    pre_build_image: false
+
   - name: ubuntu20
     image: 'ubuntu:focal'
     pre_build_image: false
 
   - name: ubuntu22
+    image: 'ubuntu:jammy'
+    pre_build_image: false
+
+  - name: ubuntu24
     image: 'ubuntu:jammy'
     pre_build_image: false
 
