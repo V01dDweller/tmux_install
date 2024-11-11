@@ -1,7 +1,7 @@
 # tmux_install
 
 ![Ansible Role](https://img.shields.io/ansible/role/d/v01ddweller/tmux_install)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/t/v01dDweller/vim_install)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/t/v01dDweller/tmux_install)
 
 **Last update:** 7/31/2022
 
