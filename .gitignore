@@ -7,3 +7,6 @@ desktop.ini
 
 # MacOS .DS_Store
 .DS_Store
+
+# Ansible temp directory
+.ansible
